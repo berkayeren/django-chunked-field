@@ -127,7 +127,7 @@ class ChunkedTextField(models.TextField):
         """
         Return None as this field does not have a direct database representation.
         """
-        return None
+        return 'varchar(1)'
 
     def get_prep_value(self, value: Any) -> str:
         """
