@@ -30,5 +30,6 @@ setup(
     ],
     install_requires=[
         'Django>=3.2',
+        'djangorestframework>=3.14.0'
     ],
 )
