@@ -9,7 +9,7 @@ def read(fname):
 
 setup(
     name='django-chunked-field',
-    version='0.0.2',
+    version='0.0.3',
     description='A Django app providing a ChunkedTextField for storing large text data in chunks.',
     long_description=read('README.md'),
     long_description_content_type='text/markdown',
