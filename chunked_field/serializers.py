@@ -8,7 +8,7 @@ class ChunkedJSONField(serializers.Field):
         # `value` here is the raw string returned by the chunked field.
         if value is None or value.strip() == '':
             return None
-        return json.loads(value)
+        return json.loads(value.replace('\'', '"'))
 
     def to_internal_value(self, data):
         # `data` here is the incoming Python object from the request.
