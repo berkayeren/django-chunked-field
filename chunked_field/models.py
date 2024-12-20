@@ -20,7 +20,7 @@ class DataChunk(models.Model):
     object_id = models.PositiveIntegerField()
     field_name = models.CharField(max_length=100)
     sequence = models.PositiveIntegerField()
-    content = models.CharField(max_length=4000)
+    content = models.CharField(max_length=2000)
 
     content_object = GenericForeignKey('content_type', 'object_id')
 
