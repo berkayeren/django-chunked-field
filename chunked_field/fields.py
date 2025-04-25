@@ -23,7 +23,7 @@ class ChunkedTextField(models.TextField):
 
     def __init__(self, *args: Any, **kwargs: Any) -> None:
         self.truncate_length = kwargs.pop('truncate_length', 50)  # Default truncate length
-        self.chunk_size = kwargs.pop('truncate_length', 4000)  # Default chunk size
+        self.chunk_size = kwargs.pop('chunk_size', 4000)  # Default chunk size
         kwargs['editable'] = True  # Ensure the field is editable
         super().__init__(*args, **kwargs)
         self.concrete = False  # Make sure Django knows this is not a concrete field
